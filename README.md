@@ -30,6 +30,12 @@ Application autonome (aucun prérequis .NET à installer séparément), avec cho
 
 MindMap Book Writer est aussi disponible en version web/Docker pour un usage multi-appareils (par exemple : rédiger sur PC à la maison et continuer sur tablette en déplacement), avec les mêmes livres accessibles des deux côtés.
 
+## ☕ Soutenir le projet
+
+Ce logiciel est gratuit et développé sur mon temps libre. Si vous l'appréciez et voulez soutenir son développement, un petit don est toujours apprécié :
+
+👉 **[paypal.me/YMONTFORT](https://paypal.me/YMONTFORT)**
+
 ---
 
 *Ce dépôt sert uniquement à la présentation et au téléchargement — le code source du projet est privé.*
