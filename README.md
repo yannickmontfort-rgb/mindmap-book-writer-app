@@ -12,12 +12,15 @@ Logiciel d'écriture de livre basé sur une carte mentale : organisez vos partie
 ## ✨ Fonctionnalités
 
 - 🗺️ **Carte mentale** interactive pour structurer votre livre (glisser-déposer, renommage rapide, raccourcis clavier)
+- 🕐 **Chronologie de l'intrigue** : vue Gantt zoomable, calendrier personnalisable, événements liés aux personnages/lieux et aux scènes correspondantes
 - 📚 **Multi-livres** : romans, nouvelles, poésie, manuels pratiques, mémoires — chacun avec sa structure et son vocabulaire adaptés (chapitres/scènes, poèmes, sections...)
+- ✅ **Statut d'avancement** par chapitre/scène (Non commencé / En cours / Terminé)
 - ✍️ Éditeur Markdown avec aperçu, objectifs de mots par scène/chapitre, minuteur Pomodoro, mode plein écran sans distraction, son de machine à écrire
-- 🏷️ Fiches de référence (personnages, lieux, intrigue, sources...) liées directement aux scènes concernées
+- 🗂️ Fiches de référence (personnages, lieux, intrigue, sources...) en galerie de cartes, liées directement aux scènes concernées
 - 🔍 Recherche plein texte dans tout le livre
 - 🕐 Historique des versions par scène — rien n'est jamais perdu définitivement
 - 📤 Export **Markdown**, **DOCX**, **PDF**, et **PDF prêt pour Amazon KDP** (format 6x9", sommaire cliquable, mise en page adaptée à l'impression)
+- 🌐 Disponible en **français et anglais**
 - 💾 Sauvegarde automatique en continu
 
 ## ⬇️ Téléchargement (Windows)
