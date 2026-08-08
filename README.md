@@ -19,7 +19,7 @@ Logiciel d'écriture de livre basé sur une carte mentale : organisez vos partie
 - 🗂️ Fiches de référence (personnages, lieux, intrigue, sources...) en galerie de cartes, liées directement aux scènes concernées, avec photo (portrait pour les personnages, paysage pour les lieux)
 - 🔍 Recherche plein texte dans tout le livre
 - 🕐 Historique des versions par scène — rien n'est jamais perdu définitivement
-- 📤 Export **Markdown**, **DOCX**, **PDF**, et **PDF prêt pour Amazon KDP** (format 6x9", sommaire cliquable, mise en page adaptée à l'impression)
+- 📤 Export **Markdown**, **DOCX**, **PDF**, **PDF prêt pour Amazon KDP** (format 6x9", sommaire cliquable, mise en page adaptée à l'impression) et **EPUB** (liseuses, Kobo, Apple Books)
 - 🌐 Disponible en **français et anglais**
 - 💾 Sauvegarde automatique en continu
 
