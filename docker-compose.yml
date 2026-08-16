@@ -1,0 +1,68 @@
+version: '3.8'
+
+# MindMap Book Writer — version web auto-hébergée
+# Images publiques prêtes à l'emploi : aucun build nécessaire, "docker compose up -d" suffit.
+
+services:
+  server:
+    image: ghcr.io/yannickmontfort-rgb/mindmap-book-writer-server:latest
+    container_name: mindmap-server
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - mindmap-data:/app/data
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+      - ASPNETCORE_ENVIRONMENT=Production
+      - BOOKWRITER_ALLOW_LANGUAGE_PICKER=true
+      - TZ=Europe/Paris
+    networks:
+      - mindmap-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/book"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  client:
+    image: ghcr.io/yannickmontfort-rgb/mindmap-book-writer-client:latest
+    container_name: mindmap-client
+    restart: unless-stopped
+    ports:
+      - "5001:80"
+    depends_on:
+      server:
+        condition: service_healthy
+    networks:
+      - mindmap-network
+    environment:
+      - TZ=Europe/Paris
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  mindmap-data:
+    driver: local
+    # Pour stocker les livres dans un dossier précis plutôt qu'un volume Docker anonyme,
+    # décommentez et adaptez le chemin ci-dessous.
+    #
+    # Synology (DSM, Container Manager) :
+    # driver_opts:
+    #   type: none
+    #   o: bind
+    #   device: /volume1/docker/mindmap-book-writer/data
+    #
+    # Linux générique :
+    # driver_opts:
+    #   type: none
+    #   o: bind
+    #   device: /chemin/vers/vos/livres
+
+networks:
+  mindmap-network:
+    driver: bridge

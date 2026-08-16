@@ -29,9 +29,19 @@ Logiciel d'écriture de livre basé sur une carte mentale : organisez vos partie
 
 Application autonome (aucun prérequis .NET à installer séparément), avec choix du dossier d'installation et raccourcis Bureau/Menu Démarrer.
 
-## 🖥️ À propos
+## 🐳 Version web / auto-hébergement (Docker)
 
-MindMap Book Writer est aussi disponible en version web/Docker pour un usage multi-appareils (par exemple : rédiger sur PC à la maison et continuer sur tablette en déplacement), avec les mêmes livres accessibles des deux côtés.
+MindMap Book Writer est aussi disponible en version web à auto-héberger (NAS, serveur Linux, PC toujours allumé...) — utile pour un usage multi-appareils : rédigez sur PC à la maison et continuez sur tablette en déplacement, avec les mêmes livres des deux côtés.
+
+**Prérequis** : Docker + Docker Compose, ou un gestionnaire de conteneurs qui importe un `docker-compose.yml` (Portainer, Container Manager sur Synology DSM 7.2+).
+
+1. Téléchargez [`docker-compose.yml`](docker-compose.yml)
+2. `docker compose up -d` (ou import direct dans Portainer/Container Manager — aucun build requis, les images sont publiques)
+3. Ouvrez `http://IP-DE-VOTRE-SERVEUR:5001` — un choix de langue (français/anglais) apparaît au premier lancement
+
+**Sur un NAS Synology (DSM 7.2+)** : Container Manager → Projet → Créer → collez le contenu de `docker-compose.yml` → Suivant.
+
+Vos livres sont stockés dans un volume nommé `mindmap-data`. Pour les stocker dans un dossier précis de votre NAS/serveur plutôt qu'un volume Docker anonyme, adaptez la section `volumes` du fichier (instructions en commentaire à l'intérieur).
 
 ## ☕ Soutenir le projet
 
